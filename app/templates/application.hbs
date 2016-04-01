@@ -1,13 +1,6 @@
-<header class = "jumbotron">
-  <h1>Ask Anything!</h1>
-</header>
-
-<div class="container">
+<div class="container-fluid">
+  {{#link-to 'index'}}Home{{/link-to}}
+  {{#link-to 'contact'}}Contact{{/link-to}}
+  {{#link-to 'about'}}About{{/link-to}}
   {{outlet}}
 </div>
-
-<hr>
-
-<footer>
-  {{#link-to 'index'}}Home{{/link-to}} {{#link-to 'about'}}About{{/link-to}} {{#link-to 'contact'}}Contack{{/link-to}}
-</footer>

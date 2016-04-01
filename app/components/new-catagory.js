@@ -10,6 +10,7 @@ export default Ember.Component.extend({
     saveCatagory1() {
       var params = {
         name: this.get('name'),
+        description: this.get('description'),        
       };
       this.set('addNewCatagory', false);
       this.sendAction('saveCatagory2', params);

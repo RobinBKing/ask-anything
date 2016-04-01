@@ -6,8 +6,9 @@
 <h2> Catagories </h2>
 
 <ul class="indexList">
-  {{#each model.catagories as |catagory|}}
-    <li>{{#link-to 'catagory' catagory.id}}{{catagory.name}}{{/link-to}}</li>
+  {{#each model as |catagory|}}
+    <!-- <li>{{#link-to 'catagory' catagory.id}}{{catagory.name}}{{/link-to}}</li> -->
+    {{catagory-tile catagory=catagory update="update"}}
   {{/each}}
 </ul>
 

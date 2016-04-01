@@ -1,22 +1,6 @@
-<!-- <li>{{catagory.name}}
-  <button {{action 'delete' catagory}}>Delete</button>
-</li> -->
 <li>
   <div class="catagory-tile col col-sm-6">
     {{#link-to 'catagory' catagory.id}}{{catagory.name}}{{/link-to}}<br>
+    <h4>{{catagory.description}}</h4>
   </div>
-  <button {{action 'delete' catagory}}>Delete</button>
 </li>
-
-<!-- <p>{{catagory.name}}</p> -->
-<!-- <p>Country: {{catagory.country}}</p> -->
-
-<!-- <hr> -->
-
-<!-- <p>Questions in {{catagory.name}}:</p>
-<ul>
-  {{#each catagory.questions as |question|}}
-    <li>{{question.title}}</li>
-  {{/each}}
-
-</ul> -->
