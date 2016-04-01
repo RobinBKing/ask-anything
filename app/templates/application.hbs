@@ -1,3 +1,15 @@
-<h2 id="title">Welcome to Ember</h2>
+<header class = "jumbotron">
+  <h1>Ask Anything!</h1>
+</header>
 
-{{outlet}}
+<div class="container">
+  {{outlet}}
+</div>
+
+<hr>
+
+<footer>
+  {{#link-to 'contact'}}Our representatives would love to help!{{/link-to}} <br>
+  {{#link-to 'index'}}Return to Main page{{/link-to}} <br>
+  {{#link-to 'about'}}About{{/link-to}}<br>
+</footer>
