@@ -1,3 +1,14 @@
-<h1> Welcome to Ask Anything </h1>
+<div class="jumbotron">
+  <h1>Ask Anything </h1>
+  <h3>We hope you find answers to your questions . . . or questions to answer.</h3>
+</div>
 
-We hope you find answers to your questions . . . or questions to answer.
+<h2> Catagories </h2>
+
+<ul class="indexList">
+  {{#each model.catagories as |catagory|}}
+    <li>{{#link-to 'catagory' catagory.id}}{{catagory.name}}{{/link-to}}</li>
+  {{/each}}
+</ul>
+
+{{new-catagory saveCatagory2="saveCatagory3"}}
