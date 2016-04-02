@@ -6,19 +6,25 @@ export default Ember.Route.extend({
   },
 
   actions: {
-   saveCatagory3(params) {
+   saveQuestion3(params) {
      var newCatagory = this.store.createRecord('catagory', params);
      newCatagory.save();
      this.transitionTo('index');
    },
 
-   update(catagory, params) {
-      Object.keys(params).forEach(function(key) {
-        if(params[key]!==undefined) {
-          catagory.set(key,params[key]);
-        }
-      });
-      catagory.save();
+  //  update(catagory, params) {
+  //     Object.keys(params).forEach(function(key) {
+  //       if(params[key]!==undefined) {
+  //         catagory.set(key,params[key]);
+  //       }
+  //     });
+  //     catagory.save();
+  //     this.transitionTo('index');
+  //   },
+
+    saveCatagory3(params) {
+      var newCatagory = this.store.createRecord('catagory', params);
+      newCatagory.save();
       this.transitionTo('index');
     }
  }

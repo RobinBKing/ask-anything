@@ -1,6 +1,19 @@
-<li>
-  <div class="catagory-tile col col-sm-6">
+<!-- <li>
+  <div class="catagory-tile">
     {{#link-to 'catagory' catagory.id}}{{catagory.name}}{{/link-to}}<br>
-    <h4>{{catagory.description}}</h4>
   </div>
-</li>
+</li> -->
+<p>{{catagory.name}}'s Details</p>
+<p>Description: {{catagory.description}}</p>
+
+<hr>
+
+<p>Questions in {{catagory.name}}:</p>
+<ul>
+  {{#each catagory.questions as |question|}}
+    <li>{{question.author}}'s question {{question.title}}</li>
+  {{/each}}
+
+</ul>
+
+<button {{action 'delete' catagory}}>Delete</button>

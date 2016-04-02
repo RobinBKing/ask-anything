@@ -5,18 +5,24 @@ export default Ember.Route.extend({
     return this.store.findRecord('catagory', params.catagory_id);
   },
   actions: {
-    update(catagory, params) {
-      Object.keys(params).forEach(function(key) {
-        if(params[key]!==undefined) {
-          catagory.set(key,params[key]);
-        }
+    saveQuestion3(params) {
+      var newQuestion = this.store.createRecord('question', params);
+      var catagory = params.catagory;
+      catagory.get('questions').addObject(newQuestion);
+      newQuestion.save().then(function() {
+        return catagory.save();
       });
-      catagory.save();
-      this.transitionTo('catagory');
+      this.transitionTo('catagory', params.catagory);
     },
+
     destroyCatagory(catagory) {
-      catagory.destroyRecord();
+      var question_deletions = catagory.get('questions').map(function(question) {
+        return question.destroyRecord();
+      });
+      Ember.RSVP.all(question_deletions).then(function() {
+        return catagory.destroyRecord();
+      });
       this.transitionTo('index');
+      }
     }
-  }
 });
