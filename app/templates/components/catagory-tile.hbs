@@ -3,17 +3,18 @@
     {{#link-to 'catagory' catagory.id}}{{catagory.name}}{{/link-to}}<br>
   </div>
 </li> -->
-<p>{{catagory.name}}'s Details</p>
+<!-- <p>{{catagory.name}}'s Details</p>
 <p>Description: {{catagory.description}}</p>
 
-<hr>
-
-<p>Questions in {{catagory.name}}:</p>
-<ul>
-  {{#each catagory.questions as |question|}}
-    <li>{{question.author}}'s question {{question.title}}</li>
-  {{/each}}
-
-</ul>
-
-<button {{action 'delete' catagory}}>Delete</button>
+<hr> -->
+<li>
+  <div class="catagoryQuestions">
+    <p>{{catagory.name}}:</p>
+    <ul>
+      {{#each catagory.questions as |question|}}
+        <li>{{question-tile question=question}}</li>
+      {{/each}}
+    </ul>
+  </div>
+</li>
+<!-- <button {{action 'delete' catagory}}>Delete</button> -->

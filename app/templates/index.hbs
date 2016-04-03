@@ -1,25 +1,30 @@
 <div class="jumbotron">
-  <h1>Ask Anything </h1>
-  <h3>Find answers to your questions . . . or questions to answer.</h3>
+    <h3>Find answers to your questions . . . or questions to answer.</h3>
 </div>
 
-<h2> Current Questions </h2>
-
-<ul>
-  {{#each model.questions as |question|}}
-    {{question-tile question=question}}
-  {{/each}}
-</ul>
-
+<div class="questions">
+  <a href="#"><img src="http://michaelruguleiski.com/wp-content/uploads/2014/01/Kid-raising-hand.jpg" alt="" /></a>
+  <h4>Questions</h4>
+  <ul>
+    {{#each model.catagories as |catagory|}}
+      {{catagory-tile catagory=catagory}}
+    {{/each}}
+  </ul>
+</div>
+<hr>
 <h2> Catagories </h2>
-
-<ul class="indexList">
-  <!-- {{#each model as |catagory|}}
+<br>
+<ul>
+<!-- <ul class="indexList">
+  {{#each model as |catagory|}}
      {{catagory-tile catagory=catagory update="update"}}
   {{/each}} -->
   {{#each model.catagories as |catagory|}}
-    <li>{{#link-to 'catagory' catagory.id}}{{catagory.name}}{{/link-to}}</li>
+    <li>
+      {{#link-to 'catagory' catagory.id}}
+      {{catagory.name}}{{/link-to}}
+    </li>
   {{/each}}
 </ul>
-
+<br>
 {{new-catagory saveCatagory2="saveCatagory3"}}
