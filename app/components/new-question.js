@@ -11,11 +11,10 @@ export default Ember.Component.extend({
       var params = {
         title: this.get('title'),
         description: this.get('description'),
-        catagory: this.get('catagory'),
         author: this.get('author'),
         date: this.get('date'),
       };
-      
+
       this.set('addNewQuestion', false);
       this.sendAction('saveQuestion2', params);
     }

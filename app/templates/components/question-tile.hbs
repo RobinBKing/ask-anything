@@ -1,12 +1,12 @@
 <li>
-  {{#link-to 'question' question.id}}
-    {{question.title}}
-  {{/link-to}}
-  <!-- <div class="questionAnswers">
+  <div class="questionAnswers">
+    <h3>Answers to {{question.title}}:</h3>
     <ul>
       {{#each question.answers as |answer|}}
         <li>{{answer-tile answer=answer}}</li>
       {{/each}}
     </ul>
-  </div> -->
+  </div>
 </li>
+
+<button {{action 'delete' question}}>Delete</button>
