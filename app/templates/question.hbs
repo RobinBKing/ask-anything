@@ -1,5 +1,7 @@
 <h2>More information about {{model.author}}'s question: {{model.title}}:</h2>
 
-{{update-question question=model update="update"}}
-
 {{question-detail question=model destroyQuestion="destroyQuestion"}}
+<br>
+{{update-question question=model update="update"}}
+<br>
+<button {{action 'delete' question}}>Delete</button>

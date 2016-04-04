@@ -1,15 +1,5 @@
-<!-- <li>
-  <div class="catagory-tile">
-    {{#link-to 'catagory' catagory.id}}{{catagory.name}}{{/link-to}}<br>
-  </div>
-</li> -->
-<!-- <p>{{catagory.name}}'s Details</p>
-<p>Description: {{catagory.description}}</p>
-
-<hr> -->
 <li>
   <div class="catagoryQuestions">
-    <p>{{catagory.name}}:</p>
     <ul>
       {{#each catagory.questions as |question|}}
         <li>{{question-tile question=question}}</li>

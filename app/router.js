@@ -10,6 +10,7 @@ Router.map(function() {
   this.route('contact');
   this.route('catagory', {path: '/catagory/:catagory_id'});
   this.route('question', {path: '/question/:question_id'});
+  this.route('answer', {path: '/answer/:answer_id'});
 });
 
 export default Router;

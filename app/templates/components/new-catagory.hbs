@@ -1,12 +1,12 @@
 {{#if addNewCatagory}}
-  <h1>Add a New Catagory</h1>
+  <!-- <h1>Add a New Catagory</h1> -->
   <div>
     <form>
       <div class="form-group">
         <label for="name">Catagory Name</label>
         {{input value=name id="name"}}
       </div>
-      
+
       <div class="form-group">
         <label for="description">Description</label>
         {{input value=description id="description"}}
@@ -16,5 +16,5 @@
     </form>
   </div>
 {{else}}
-  <button {{action 'catagoryFormShow'}}>New Catagory</button>
+  <button class="btn-success" {{action 'catagoryFormShow'}}>Make a New One</button>
 {{/if}}

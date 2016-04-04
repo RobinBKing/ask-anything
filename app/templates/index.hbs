@@ -1,30 +1,28 @@
 <div class="jumbotron">
-    <h3>Find answers to your questions . . . or questions to answer.</h3>
+  <h3>Find answers to your questions . . . or questions to answer.</h3>
 </div>
-
-<div class="questions">
-  <a href="#"><img src="http://michaelruguleiski.com/wp-content/uploads/2014/01/Kid-raising-hand.jpg" alt="" /></a>
-  <h4>Questions</h4>
-  <ul>
-    {{#each model.catagories as |catagory|}}
-      {{catagory-tile catagory=catagory}}
-    {{/each}}
-  </ul>
+<div class="content row">
+  <div class="col col-sm-3 cataories">
+    <a href="#"><img src="http://michaelruguleiski.com/wp-content/uploads/2014/01/Kid-raising-hand.jpg" alt="" /></a>
+    <h4>Got Questions?</h4>
+    <p>Pick a catagory</p>
+    <ul>
+      {{#each model.catagories as |catagory|}}
+        <li>
+          {{#link-to 'catagory' catagory.id}}
+            {{catagory.name}}
+          {{/link-to}}
+        </li>
+      {{/each}}
+    </ul>
+    {{new-catagory saveCatagory2="saveCatagory3"}}
+  </div>
+  <div class="col col-sm-9 questions">
+    <a href="#"><img src="http://cdn.theatlantic.com/assets/media/img/2014/07/14/opener_v02-2/1920.jpg?1440086868" alt="" /></a>  <h4> People Want to Know </h4>
+    <ul>
+      {{#each model.catagories as |catagory|}}
+        {{catagory-tile catagory=catagory}}
+      {{/each}}
+    </ul>
+  </div>
 </div>
-<hr>
-<h2> Catagories </h2>
-<br>
-<ul>
-<!-- <ul class="indexList">
-  {{#each model as |catagory|}}
-     {{catagory-tile catagory=catagory update="update"}}
-  {{/each}} -->
-  {{#each model.catagories as |catagory|}}
-    <li>
-      {{#link-to 'catagory' catagory.id}}
-      {{catagory.name}}{{/link-to}}
-    </li>
-  {{/each}}
-</ul>
-<br>
-{{new-catagory saveCatagory2="saveCatagory3"}}

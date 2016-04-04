@@ -1,6 +1,8 @@
-<!-- {{catagory-detail update="update" catagory=model}} -->
 <h1> Questions in {{model.name}} </h1>
-
+{{catagory-detail update="update" catagory=model}}
+<br>
 {{catagory-tile catagory=model destroyCatagory="destroyCatagory"}}
-
+<br>
 {{new-question saveQuestion2="saveQuestion3" catagory=model}}
+<br>
+<button {{action 'delete' catagory}}>Delete</button> 
