@@ -15,6 +15,7 @@ export default Ember.Component.extend({
         author: this.get('author'),
         date: this.get('date'),
       };
+      
       this.set('addNewQuestion', false);
       this.sendAction('saveQuestion2', params);
     }

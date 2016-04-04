@@ -1,1 +1,7 @@
-{{outlet}}
+<h2>More information about {{model.author}}'s answer: {{model.title}}:</h2>
+
+{{answer-detail answer=model destroyAnswer="destroyAnswer"}}
+<br>
+{{update-answer answer=model update="update"}}
+<br>
+<button {{action 'delete' answer}}>Delete</button>

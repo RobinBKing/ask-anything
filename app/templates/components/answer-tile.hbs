@@ -1,1 +1,5 @@
-{{yield}}
+{{yield}}<li>
+  {{#link-to 'answer' answer.id}}
+    {{answer.title}}
+  {{/link-to}}
+</li>
