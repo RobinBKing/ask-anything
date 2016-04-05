@@ -1,7 +1,8 @@
 {{#if updateQuestionForm}}
-  <h4>Update {{question.authors}}'s question about {{question.title}}</h4>
-    <div>
-      <form>
+    <div class="updateQuestionPage">
+      <h4>Update {{question.authors}}'s question about {{question.title}}</h4>
+      <br>
+      <form id="updateAnswerPageForm">
         <div class="form-group">
           <label for="title">Title</label>
           {{input value=title id="title" placeholder=question.title}}

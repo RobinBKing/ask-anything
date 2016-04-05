@@ -1,12 +1,13 @@
 .content{
-  .cataories {
+  font-family: 'Indie Flower';
+  .questions {
     max-width: 400px;
   }
 
-  .questions {
+  .answers {
     max-width: 950px;
   }
-  .questions, .cataories {
+  .questions, .answers {
     background-color: #e0ebeb;
     height: auto;
     font-family: 'Indie Flower';
