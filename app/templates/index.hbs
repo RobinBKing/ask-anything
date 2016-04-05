@@ -8,9 +8,7 @@
     <ul>
       {{#each model.questions as |question|}}
         <li>
-          {{#link-to 'question' question.id}}
-            {{question.title}}
-          {{/link-to}}
+          {{#link-to 'question' question.id}}{{question.title}}{{/link-to}}
         </li>
       {{/each}}
     </ul>
@@ -19,7 +17,7 @@
   </div>
 
   <div class="col col-sm-9 questions">
-    <a href="#"><img src="http://cdn.theatlantic.com/assets/media/img/2014/07/14/opener_v02-2/1920.jpg?1440086868" alt="" /></a>  <h4> People Want to Know </h4>
+    <a href="#"><img src="http://cdn.theatlantic.com/assets/media/img/2014/07/14/opener_v02-2/1920.jpg?1440086868" alt="People want to know" /></a>  <h4> People Want to Know </h4>
     <ul>
       {{#each model.answers as |answer|}}
         {{answer-tile answer=answer}}

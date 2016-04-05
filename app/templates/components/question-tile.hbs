@@ -1,12 +1,7 @@
-<li>
-  <div class="questionAnswers">
-    <h3>Answers to {{question.title}}:</h3>
-    <ul>
-      {{#each question.answers as |answer|}}
-        <li>{{answer-tile answer=answer}}</li>
-      {{/each}}
-    </ul>
-  </div>
-</li>
+  <ul>
+    {{#each question.answers as |answer|}}
+    <li>{{answer-tile answer=answer}}</li>
+    {{/each}}
+  </ul>
 
-<button {{action 'delete' question}}>Delete</button>
+  <button {{action 'delete' question}}>Delete</button>

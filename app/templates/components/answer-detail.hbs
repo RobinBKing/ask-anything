@@ -1,3 +1,4 @@
-For question {{answer.question.title}}, {{answer.author}} answers: {{answer.title}}
-<br>
-<button {{action 'delete' answer}}>Delete</button>
+<div class="answerDetail">
+  <h3>{{answer.author}} says: {{answer.title}} Don't like that answer?
+  <button {{action 'delete' answer}}>Delete it!</button></h3>
+</div>

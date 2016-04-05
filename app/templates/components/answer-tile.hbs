@@ -1,5 +1,7 @@
-}<li>
+<li>
+  {{answer.question.title}}
+  <br>
   {{#link-to 'answer' answer.id}}
-    {{answer.author}}'s answer to {{answer.question.title}}
+    {{answer.author}} says: {{answer.title}}
   {{/link-to}}
 </li>

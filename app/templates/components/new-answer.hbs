@@ -1,25 +1,24 @@
 {{#if addNewAnswer}}
-  <h1>New Answer</h1>
-    <div>
-      <form>
-        <div class="form-group">
-          <label for="title">Title</label>
-          {{input value=title id="title"}}
-        </div>
+  <div>
+    <form>
+      <div class="form-group">
+        <label for="title">What's Your Answer?</label>
+        {{input value=title id="title"}}
+      </div>
 
-        <div class="form-group">
-          <label for="author">Author</label>
-          {{input value=author id="author"}}
-        </div>
+      <div class="form-group">
+        <label for="author">Says Who?</label>
+        {{input value=author id="author"}}
+      </div>
 
-        <div class="form-group">
-          <label for="date">Insert Date</label>
-          {{input value=date id="date"}}
-        </div>
+      <div class="form-group">
+        <label for="date">Insert Date</label>
+        {{input value=date id="date"}}
+      </div>
 
-        <button {{action 'saveAnswer1'}}>Save</button>
-      </form>
-    </div>
+      <button {{action 'saveAnswer1'}}>Save</button>
+    </form>
+  </div>
 {{else}}
-    <button {{action 'answernFormShow'}}>New Answer</button>
+    <button {{action 'answerFormShow'}}>Answer the Question</button>
 {{/if}}

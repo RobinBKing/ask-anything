@@ -1,7 +1,8 @@
-<h2>More information about {{model.author}}'s question: {{model.title}}:</h2>
+
+<h2>{{model.title}}</h2>
 
 {{question-tile question=model destroyQuestion="destroyQuestion"}}
 <br>
-{{new-answer saveAnswer2="saveAnswer3" catagory=model}}
+{{new-answer saveAnswer2="saveAnswer3" question=model}}
 {{!-- <br>
 {{update-question question=model update="update"}} --}}

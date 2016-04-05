@@ -1,18 +1,13 @@
 .content{
-  background-image: url('https://image.freepik.com/free-photo/urban-texture-33_2734521.jpg');
-  background-repeat: no-repeat;
-  background-size: cover;
-
   .cataories {
     max-width: 400px;
   }
 
   .questions {
-    max-width: 800px;
+    max-width: 950px;
   }
   .questions, .cataories {
     background-color: #e0ebeb;
-    // width: 400px;
     height: auto;
     font-family: 'Indie Flower';
     border: solid 2px black;
@@ -23,7 +18,7 @@
 
     img {
       width: 100%;
-      height: 230px;
+      height: 100%;
       padding: 0;
     }
 
@@ -48,8 +43,11 @@
     }
   }
 
-  .catagoryQuestion {
-    text-align: left;
+  .btn-ask {
+    button {
+      font-size: 24px;
+      width: 94%;
+      margin: 10px;
+    }
   }
-
 }
